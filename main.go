@@ -10,8 +10,6 @@ import (
 	"os"
 )
 
-//     sys.stdout.writelines(b64encode(cert.fingerprint(algorithm=SHA256())).decode("utf-8"))
-
 func main() {
 	certPath := flag.String("cert_path", "", "Path to the certificate file")
 

@@ -8,7 +8,11 @@ gosec:
 
 staticcheck:
 	$(info Run staticcheck)
-	staticcheck ./...
+	staticcheck main.go
+
+deadcode:
+	$(info Run deadcode)
+	deadcode .
 
 build:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -o ./bin/x509_fingerprint ${LDFLAGS} ./main.go
